@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Detalle del Paciente</title>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div align="center" >
+        <div style="background-color:#EBF5FB">
+            <br>
+            <h2><strong>Datos del Paciente</strong></h2>
+            <br>
+        </div>
+        <div>
+            <br>
+            <p><strong>Cedula: </strong>{{paciente.cedula}}</p>
+            <p><strong>Apellidos: </strong>{{paciente.apellidos}}</p>
+            <p><strong>Nombres: </strong>{{paciente.nombres}}</p>
+            <p><strong>Sexo: </strong>{{paciente.sexo}}</p>
+            <p><strong>Fecha de nacimiento: </strong>{{paciente.fecha_nac}}</p>
+            <p><strong>Estado Civil: </strong>{{paciente.est_civil}}</p>
+            <p><strong>Correo: </strong>{{paciente.correo}}</p>
+            <p><strong>Numero Telefonico: </strong>{{paciente.num_telef}}</p>
+            <p><strong>Tipo de Sangre: </strong>{{paciente.tipo_sangre}}</p>
+            <p><strong>Antecedente Personal: </strong>{{paciente.antecedentes.ant_personal}}</p>
+            <p><strong>Antecedente Genetico: </strong>{{paciente.antecedentes.ant_genetico}}</p>
+            <p><strong>Personal Medico a cargo: </strong>{{paciente.personal_med.apellido}} {{paciente.personal_med.nombre}} - {{paciente.personal_med.especialidad}}</p>
+            <br>
+               <div><a href="{% url 'inicio' %}" class="btn btn-default">Regresar</a></div>
+        </div>
+    </div>
+</body>
+</html>
